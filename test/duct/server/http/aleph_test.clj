@@ -5,6 +5,9 @@
             [duct.server.http.aleph :as aleph]
             [integrant.core :as ig]))
 
+(deftest key-test
+  (is (isa? :duct.server.http/aleph :duct.server/http)))
+
 (deftest init-and-halt-test
   (let [response {:status 200 :headers {} :body "test"}
         handler  (constantly response)
