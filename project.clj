@@ -5,4 +5,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0-alpha17"]
                  [aleph "0.4.3"]
-                 [integrant "0.4.0"]])
+                 [integrant "0.4.0"]]
+  :profiles
+  {:dev {:dependencies [[clj-http "2.1.0"]]}})

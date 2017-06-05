@@ -1,6 +1,9 @@
-(ns duct.server.http.aleph)
+(ns duct.server.http.aleph
+  (:require [aleph.http :as aleph]
+            [integrant.core :as ig]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defmethod ig/init-key :duct.server.http/aleph [_ {:keys [handler] :as options}]
+  (aleph/start-server handler (dissoc options :handler)))
+
+(defmethod ig/halt-key! :duct.server.http/aleph [_ ^java.io.Closeable server]
+  (.close server))
