@@ -1,4 +1,4 @@
-(defproject duct/server.http.aleph "0.1.0-SNAPSHOT"
+(defproject duct/server.http.aleph "0.1.0"
   :description "Integrant methods for running an Aleph web server"
   :url "https://github.com/duct-framework/server.http.aleph"
   :license {:name "Eclipse Public License"

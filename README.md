@@ -12,7 +12,7 @@ Integrant multimethods for running an [Aleph][] HTTP server for the
 
 To install, add the following to your project `:dependencies`:
 
-    [duct/server.http.aleph "0.1.0-SNAPSHOT"]
+    [duct/server.http.aleph "0.1.0"]
 
 ## Usage
 
