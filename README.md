@@ -1,5 +1,7 @@
 # Duct server.http.aleph
 
+[![Build Status](https://travis-ci.org/duct-framework/server.http.aleph.svg?branch=master)](https://travis-ci.org/duct-framework/server.http.aleph)
+
 Integrant multimethods for running an [Aleph][] HTTP server for the
 [Duct][] framework.
 
