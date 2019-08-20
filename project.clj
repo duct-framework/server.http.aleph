@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.9.0-beta3"]
                  [duct/core "0.6.1"]
-                 [aleph "0.4.3"]
+                 [aleph "0.4.6"]
                  [duct/logger "0.2.1"]
                  [integrant "0.6.1"]]
   :profiles
