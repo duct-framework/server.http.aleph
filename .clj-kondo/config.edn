@@ -1,0 +1,18 @@
+{:skip-comments true
+ :linters       {:private-call              {:level :warn}
+                 :redundant-do              {:level :error}
+                 :single-key-in             {:level :info}
+                 :single-operand-comparison {:level :info}
+                 :shadowed-var              {:level :info}
+                 :syntax                    {:level :error}
+                 :unused-binding            {:exclude-destructured-keys-in-fn-args true}
+                 :unresolved-symbol         {:report-duplicates true
+                                             :exclude           [(clojure.test/are [thrown-on-path?])
+                                                                 (cljs.test/are [thrown-on-path?])
+                                                                 (clojure.test/is [thrown-on-path?])
+                                                                 (cljs.test/is [thrown-on-path?])]}
+                 :use                       {:level :error}}
+ :lint-as       {clojure.test.check.properties/for-all   clojure.core/let
+                 clojure.test.check.clojure-test/defspec clojure.test/deftest}
+ :output        {:pattern "[{{LEVEL}}] {{filename}} [{{row}}:{{coll}}]: {{message}}"}
+ :hooks         {}}
