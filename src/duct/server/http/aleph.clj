@@ -11,7 +11,7 @@
   (let [handler (atom (delay (:handler opts)))
         logger  (atom logger)
         options (dissoc opts :handler :logger)]
-    (logger/log @logger :report ::starting-server opts #_(select-keys opts [:port]))
+    (logger/log @logger :report ::starting-server (select-keys opts [:port]))
     {:handler handler
      :logger  logger
      :server  (aleph/start-server (fn [req] (@@handler req)) options)}))
